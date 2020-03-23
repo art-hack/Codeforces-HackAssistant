@@ -154,16 +154,7 @@ def run(pp,single=False):
     if(not single):
         rewrite("usable/generator"+pp+".py",generator.get(1.0, END))
     available.release()
-
-    # p = sub.Popen('python generator.py',stdout=sub.PIPE,stderr=sub.PIPE)
-    # output, errors = p.communicate()
-    # output = output.decode('ASCII')
-    # errors = errors.decode('ASCII')
-    # if(errors!=""):
-    #     print(errors)
-    #     print("Generator Error!\nExiting..")
-    #     return
-
+    
     while(continue_executing):
         if single:
             result = compares(str(generator.get(1.0, END)),pp)
@@ -182,7 +173,6 @@ def run(pp,single=False):
             passed()
         else:
             return
-    # print(output,errors,output=='')
 
 
 
